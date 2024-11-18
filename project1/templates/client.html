@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 70vh;">
+        <h1>Register Your Payment Details</h1>
+        <form method="POST" style="width: 100%; max-width: 400px;">
+            <label for="full_name">Full Name:</label>
+            <input type="text" name="full_name" required><br><br>
+            
+            <label for="credit_card">Credit Card Number:</label>
+            <input type="text" name="credit_card" required><br><br>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" name="cvv" required><br><br>
+            
+            <label for="expiration_year">Expiration Year:</label>
+            <input type="text" name="expiration_year" required><br><br>
+            
+            <label for="key">Key (8 characters):</label>
+            <input type="password" name="key" required minlength="8"><br><br>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

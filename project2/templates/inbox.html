@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Inbox{% endblock %}
+
+{% block content %}
+    <h2>{{ username }}'s Notes</h2>
+
+    {% if notes %}
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for note in notes %}
+            <tr>
+                <td>{{ note.judul }}</td>
+                <td>{{ note.content }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No notes available.</p>
+    {% endif %}
+{% endblock %}
